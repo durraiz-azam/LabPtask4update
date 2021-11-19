@@ -16,10 +16,10 @@ String fname = request.getParameter("fname");
 String lname = request.getParameter("lname");
 String phone = request.getParameter("phone");
 String email = request.getParameter("email");
-String address1 = request.getParameter("address1");
-String address2 = request.getParameter("address2");
+String address1 = request.getParameter("Address1");
+String address2 = request.getParameter("Address2");
         DbConnection db = new DbConnection();
-        db.insertRecord(fname,lname,phone,email,address1);
+        db.insertRecord(fname,lname,phone,email,address1,address2);
 
 
 

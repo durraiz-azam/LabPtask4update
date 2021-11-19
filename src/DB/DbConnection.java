@@ -21,7 +21,7 @@ public class DbConnection {
         }
     }
 
-    public void insertRecord(String firstname,String lastname,String gender, String Interests1, String Int2){
+    public void insertRecord(String firstname,String lastname,String gender, String Interests1, String Int2,String Addr2){
         try {
             String sqlQuery = "INSERT INTO `employee_info` (`id`, `firstname`, `lastname`, `gender`, `interest1`, `interest2`) VALUES(NULL,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
