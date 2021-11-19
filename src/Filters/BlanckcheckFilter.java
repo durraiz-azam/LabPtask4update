@@ -17,10 +17,11 @@ public class BlanckcheckFilter implements Filter {
         String lname = req.getParameter("lname");
         String phone = req.getParameter("phone");
         String email = req.getParameter("email");
-        String address1 = req.getParameter("address1");
-        if(fname == null || lname == null || phone == null || email == null || address1 == null)
-        {
-            out.print("filter is invoked before");
+        String address1 = req.getParameter("Address1");
+        if(fname == null || lname == null || phone == null || email == null || address1 == null || fname.length()==0 || lname.length()==0 || phone.length()==0 || email.length()==0 || address1 .length()==0)
+        {System.out.println(fname+lname+phone+email+address1);
+            out.print("“none of the fields should be\n" +
+                    "empty");
         }else {
             chain.doFilter(req, resp);
             out.print("Successgully saved");
